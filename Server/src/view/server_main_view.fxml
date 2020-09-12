@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainControllerServer">
+    <bottom>
+        <Pane prefHeight="47.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#startServer" prefHeight="26.0"
+                    prefWidth="38.0" style="-fx-background-color: #424242;">
+                <tooltip>
+                    <Tooltip text="Start service"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@img/play-circle.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button layoutX="264.0" layoutY="9.0" mnemonicParsing="false" onAction="#stopServer" prefHeight="26.0"
+                    prefWidth="36.0" style="-fx-background-color: #424242;" textFill="WHITE">
+                <tooltip>
+                    <Tooltip text="Stop service"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="23.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@img/stop-circle.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button layoutX="552.0" layoutY="9.0" mnemonicParsing="false" onAction="#clearLog" prefHeight="31.0"
+                    prefWidth="34.0" style="-fx-background-color: #424242;">
+                <tooltip>
+                    <Tooltip text="Clear the current log"/>
+                </tooltip>
+                <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="557.0" layoutY="11.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="@img/delete.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+        </Pane>
+    </bottom>
+    <center>
+        <TextArea fx:id="logServer" editable="false" prefHeight="288.0" prefWidth="461.0"
+                  style="-fx-control-inner-background: #5B5B5A;" BorderPane.alignment="CENTER"/>
+    </center>
+    <left>
+        <TextArea fx:id="currentLogServer" prefHeight="336.0" prefWidth="307.0"
+                  style="-fx-control-inner-background: #424242;" BorderPane.alignment="CENTER"/>
+    </left>
+    <top>
+        <Label fx:id="lblLog" prefHeight="17.0" prefWidth="384.0" text="Log" BorderPane.alignment="CENTER">
+            <graphic>
+                <Label fx:id="lblCurrentLog" prefHeight="17.0" prefWidth="345.0" text="Current Session Log"/>
+            </graphic>
+        </Label>
+    </top>
+</BorderPane>

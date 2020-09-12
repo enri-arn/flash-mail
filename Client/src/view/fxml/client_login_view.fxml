@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LoginController">
+    <Pane layoutX="86.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #009688;"
+          AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="176.0" layoutY="61.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../img/flash.png"/>
+        </ImageView>
+        <Label layoutX="168.0" layoutY="156.0" text="Login" textFill="WHITE">
+            <font>
+                <Font name="Verdana" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="146.0" layoutY="70.0" text="FLA" textFill="WHITE">
+            <font>
+                <Font name="Verdana" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="70.0" text="H" textFill="WHITE">
+            <font>
+                <Font name="Verdana" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="90.0" text="MAIL" textFill="WHITE">
+            <font>
+                <Font name="Verdana" size="24.0"/>
+            </font>
+        </Label>
+    </Pane>
+    <Pane layoutX="81.0" layoutY="300.0" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="200.0">
+        <TextField fx:id="emailInput" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="100.0"
+                   layoutY="65.0" onKeyPressed="#emailKeyPressed" onKeyReleased="#emailKeyReleased" prefWidth="200.0"
+                   scaleShape="false" stylesheets="@../style/mainstyle.css">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextField>
+        <ImageView fx:id="imgEmailLogin" fitHeight="24.0" fitWidth="24.0" layoutX="308.0" layoutY="65.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <Label layoutX="149.0" layoutY="37.0" text="Insert email here">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="136.0" layoutY="103.0" text="Insert password here">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordInput" layoutX="100.0" layoutY="138.0" onKeyPressed="#pswKeyPressed"
+                       onKeyReleased="#pswKeyReleased" prefWidth="200.0" stylesheets="@../style/mainstyle.css">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </PasswordField>
+        <Button fx:id="loginBtn" layoutX="158.0" layoutY="189.0" mnemonicParsing="false"
+                style="-fx-background-color: #FFC107; -fx-background-radius: 0;" text="LOGIN" textFill="WHITE">
+            <font>
+                <Font name="Verdana" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow color="#0000005d" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0"/>
+            </effect>
+        </Button>
+        <ImageView fx:id="imgPasswordLogin" fitHeight="24.0" fitWidth="24.0" layoutX="308.0" layoutY="138.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+    </Pane>
+    <ImageView fx:id="closeBtn" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true"
+               AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+        <Image url="@../img/close.png"/>
+    </ImageView>
+</AnchorPane>
